@@ -24,7 +24,7 @@ export default function App() {
   async function readNdef() {
     try {
       // register for the NFC tag with NDEF in it
-      await NfcManager.requestTechnology(NfcTech.Ndef);
+      await NfcManager.requestTechnology(NfcTech.MifareIOS);
       // the resolved tag object will contain `ndefMessage` property
       const tag = await NfcManager.getTag();
       console.warn('SUCCESS: Tag found', tag);
